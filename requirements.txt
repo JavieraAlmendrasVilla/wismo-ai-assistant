@@ -1,0 +1,26 @@
+# Core LLM & Agent
+langchain==0.3.25
+langchain-ollama==0.3.3
+langchain-community==0.3.24
+langgraph==0.4.1
+
+# Vector store & embeddings
+chromadb==0.6.3
+sentence-transformers==4.1.0
+
+# Data & DB
+faker==37.1.0
+python-dotenv==1.1.0
+
+# UI
+gradio==5.29.1
+
+# Testing
+pytest==8.3.5
+pytest-asyncio==0.26.0
+
+# NLP / guardrails
+spacy==3.8.4
+
+# Utilities
+pydantic==2.11.4

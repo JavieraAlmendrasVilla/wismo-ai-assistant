@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "query": "Where is my package? Tracking number JD014600006228989874",
+    "tracking_id": "JD014600006228989874",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["in transit", "Frankfurt", "estimated"]
+  },
+  {
+    "id": 2,
+    "query": "Can you track JD014600006228001122 for me?",
+    "tracking_id": "JD014600006228001122",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["in transit", "Hamburg", "delivery"]
+  },
+  {
+    "id": 3,
+    "query": "What is the status of shipment GM123456789012345678?",
+    "tracking_id": "GM123456789012345678",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["in transit", "Berlin", "tracking"]
+  },
+  {
+    "id": 4,
+    "query": "Where is shipment LX001122334455667788 currently located?",
+    "tracking_id": "LX001122334455667788",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Cologne",
+    "expected_answer_contains": ["in transit", "Cologne", "delivery"]
+  },
+  {
+    "id": 5,
+    "query": "I need to know where parcel JD014600006228554321 is right now",
+    "tracking_id": "JD014600006228554321",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["in transit", "Munich", "estimated"]
+  },
+  {
+    "id": 6,
+    "query": "Please check tracking ID LX987654321098765432",
+    "tracking_id": "LX987654321098765432",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["out for delivery", "Munich", "today"]
+  },
+  {
+    "id": 7,
+    "query": "Track my order with number RX112233445566778899",
+    "tracking_id": "RX112233445566778899",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Cologne",
+    "expected_answer_contains": ["out for delivery", "Cologne", "courier"]
+  },
+  {
+    "id": 8,
+    "query": "Status update for GM987654321012345670?",
+    "tracking_id": "GM987654321012345670",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["out for delivery", "Frankfurt", "today"]
+  },
+  {
+    "id": 9,
+    "query": "Can you look up RX998877665544332211 for me please?",
+    "tracking_id": "RX998877665544332211",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["out for delivery", "Hamburg", "estimated"]
+  },
+  {
+    "id": 10,
+    "query": "Track parcel JD014600006228777001",
+    "tracking_id": "JD014600006228777001",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["out for delivery", "Berlin", "today"]
+  },
+  {
+    "id": 11,
+    "query": "My package JD014600006228321654 is late, what happened?",
+    "tracking_id": "JD014600006228321654",
+    "expected_status": "DELAYED",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["delayed", "Frankfurt", "apologize"]
+  },
+  {
+    "id": 12,
+    "query": "Why is GM555444333222111000 still not delivered? It was supposed to arrive yesterday.",
+    "tracking_id": "GM555444333222111000",
+    "expected_status": "DELAYED",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["delayed", "Hamburg", "new estimated"]
+  },
+  {
+    "id": 13,
+    "query": "Tracking LX776655443322110099 shows no movement for days",
+    "tracking_id": "LX776655443322110099",
+    "expected_status": "DELAYED",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["delayed", "Berlin", "investigation"]
+  },
+  {
+    "id": 14,
+    "query": "Package RX443322110099887766 was supposed to arrive two days ago",
+    "tracking_id": "RX443322110099887766",
+    "expected_status": "DELAYED",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["delayed", "Munich", "updated delivery"]
+  },
+  {
+    "id": 15,
+    "query": "I ordered express shipping but JD014600006228192837 is overdue",
+    "tracking_id": "JD014600006228192837",
+    "expected_status": "DELAYED",
+    "expected_location": "Cologne",
+    "expected_answer_contains": ["delayed", "Cologne", "contact"]
+  },
+  {
+    "id": 16,
+    "query": "GM100200300400500600 is showing delayed status, when will it arrive?",
+    "tracking_id": "GM100200300400500600",
+    "expected_status": "DELAYED",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["delayed", "Frankfurt", "estimated"]
+  },
+  {
+    "id": 17,
+    "query": "Has LX202030304040505050 been held up somewhere?",
+    "tracking_id": "LX202030304040505050",
+    "expected_status": "DELAYED",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["delayed", "Hamburg", "update"]
+  },
+  {
+    "id": 18,
+    "query": "Shipment RX606070708080909090 seems stuck in transit",
+    "tracking_id": "RX606070708080909090",
+    "expected_status": "DELAYED",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["delayed", "Berlin", "apologize"]
+  },
+  {
+    "id": 19,
+    "query": "There's a problem with my shipment JD014600006228465321, it says exception",
+    "tracking_id": "JD014600006228465321",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["exception", "Munich", "contact"]
+  },
+  {
+    "id": 20,
+    "query": "GM888777666555444333 shows delivery exception, what does that mean?",
+    "tracking_id": "GM888777666555444333",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["exception", "Frankfurt", "customs"]
+  },
+  {
+    "id": 21,
+    "query": "My parcel LX333222111000999888 was returned to sender, why?",
+    "tracking_id": "LX333222111000999888",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Cologne",
+    "expected_answer_contains": ["exception", "Cologne", "address"]
+  },
+  {
+    "id": 22,
+    "query": "RX919181726354637281 shows failed delivery attempt",
+    "tracking_id": "RX919181726354637281",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["exception", "Hamburg", "redelivery"]
+  },
+  {
+    "id": 23,
+    "query": "Parcel JD014600006228573924 is stuck in customs, can you help?",
+    "tracking_id": "JD014600006228573924",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["exception", "Berlin", "customs"]
+  },
+  {
+    "id": 24,
+    "query": "GM212121212121212121 shows an error status",
+    "tracking_id": "GM212121212121212121",
+    "expected_status": "EXCEPTION",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["exception", "Munich", "support"]
+  },
+  {
+    "id": 25,
+    "query": "Has package JD014600006228100200 been delivered yet?",
+    "tracking_id": "JD014600006228100200",
+    "expected_status": "DELIVERED",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["delivered", "Munich", "signature"]
+  },
+  {
+    "id": 26,
+    "query": "Did GM777888999000111222 arrive at its destination?",
+    "tracking_id": "GM777888999000111222",
+    "expected_status": "DELIVERED",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["delivered", "Hamburg", "successfully"]
+  },
+  {
+    "id": 27,
+    "query": "Confirm delivery of LX444555666777888999",
+    "tracking_id": "LX444555666777888999",
+    "expected_status": "DELIVERED",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["delivered", "Frankfurt", "recipient"]
+  },
+  {
+    "id": 28,
+    "query": "I think RX101010101010101010 was delivered, can you confirm?",
+    "tracking_id": "RX101010101010101010",
+    "expected_status": "DELIVERED",
+    "expected_location": "Cologne",
+    "expected_answer_contains": ["delivered", "Cologne", "confirmed"]
+  },
+  {
+    "id": 29,
+    "query": "When was JD014600006228654987 delivered exactly?",
+    "tracking_id": "JD014600006228654987",
+    "expected_status": "DELIVERED",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["delivered", "Berlin", "timestamp"]
+  },
+  {
+    "id": 30,
+    "query": "Is GM303030303030303030 already at the recipient?",
+    "tracking_id": "GM303030303030303030",
+    "expected_status": "DELIVERED",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["delivered", "Munich", "successfully"]
+  },
+  {
+    "id": 31,
+    "query": "LX505050505050505050 delivery confirmation please",
+    "tracking_id": "LX505050505050505050",
+    "expected_status": "DELIVERED",
+    "expected_location": "Hamburg",
+    "expected_answer_contains": ["delivered", "Hamburg", "proof"]
+  },
+  {
+    "id": 32,
+    "query": "Show me proof of delivery for RX707070707070707070",
+    "tracking_id": "RX707070707070707070",
+    "expected_status": "DELIVERED",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["delivered", "Frankfurt", "signature"]
+  },
+  {
+    "id": 33,
+    "query": "Track this package: FAKE-999-XXX",
+    "tracking_id": "FAKE-999-XXX",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "invalid", "check"]
+  },
+  {
+    "id": 34,
+    "query": "Where is order number 12345?",
+    "tracking_id": "FAKE-12345-ORDER",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "tracking number", "format"]
+  },
+  {
+    "id": 35,
+    "query": "Lookup tracking AAABBBCCC111222333",
+    "tracking_id": "FAKE-AAABBBCCC-111",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "verify", "tracking ID"]
+  },
+  {
+    "id": 36,
+    "query": "Can you find shipment ZZ000000000000000000?",
+    "tracking_id": "FAKE-ZZ000-000",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "does not exist", "contact"]
+  },
+  {
+    "id": 37,
+    "query": "What is the status of XX999888777666555444?",
+    "tracking_id": "FAKE-XX999-888",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "invalid", "recheck"]
+  },
+  {
+    "id": 38,
+    "query": "Track parcel with ID QQ112233445566778899",
+    "tracking_id": "FAKE-QQ112-233",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "tracking number", "verify"]
+  },
+  {
+    "id": 39,
+    "query": "Find package WW987654321098765432",
+    "tracking_id": "FAKE-WW987-654",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "does not exist", "support"]
+  },
+  {
+    "id": 40,
+    "query": "Status for PP000111222333444555?",
+    "tracking_id": "FAKE-PP000-111",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "invalid", "check again"]
+  },
+  {
+    "id": 41,
+    "query": "Where is my shipment with ID TT123456789012345678?",
+    "tracking_id": "FAKE-TT123-456",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "tracking ID", "contact"]
+  },
+  {
+    "id": 42,
+    "query": "My order has tracking VV111222333444555666",
+    "tracking_id": "FAKE-VV111-222",
+    "expected_status": "NOT_FOUND",
+    "expected_location": null,
+    "expected_answer_contains": ["not found", "does not exist", "verify"]
+  },
+  {
+    "id": 43,
+    "query": "Where is my package?",
+    "tracking_id": null,
+    "expected_status": "AMBIGUOUS",
+    "expected_location": null,
+    "expected_answer_contains": ["tracking number", "provide", "help"]
+  },
+  {
+    "id": 44,
+    "query": "What happened to my order?",
+    "tracking_id": null,
+    "expected_status": "AMBIGUOUS",
+    "expected_location": null,
+    "expected_answer_contains": ["tracking ID", "please provide", "look up"]
+  },
+  {
+    "id": 45,
+    "query": "Is it delivered yet?",
+    "tracking_id": null,
+    "expected_status": "AMBIGUOUS",
+    "expected_location": null,
+    "expected_answer_contains": ["which package", "tracking number", "clarify"]
+  },
+  {
+    "id": 46,
+    "query": "Track my shipment please",
+    "tracking_id": null,
+    "expected_status": "AMBIGUOUS",
+    "expected_location": null,
+    "expected_answer_contains": ["tracking number", "need", "provide"]
+  },
+  {
+    "id": 47,
+    "query": "I want to know the status of my delivery",
+    "tracking_id": null,
+    "expected_status": "AMBIGUOUS",
+    "expected_location": null,
+    "expected_answer_contains": ["tracking ID", "share", "assist"]
+  },
+  {
+    "id": 48,
+    "query": "What is the estimated delivery date for that package?",
+    "tracking_id": "JD014600006228989874",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Frankfurt",
+    "expected_answer_contains": ["estimated delivery", "Frankfurt", "date"]
+  },
+  {
+    "id": 49,
+    "query": "Will it arrive today or tomorrow?",
+    "tracking_id": "LX987654321098765432",
+    "expected_status": "OUT_FOR_DELIVERY",
+    "expected_location": "Munich",
+    "expected_answer_contains": ["today", "Munich", "delivery"]
+  },
+  {
+    "id": 50,
+    "query": "Is there any update since the last scan for GM123456789012345678?",
+    "tracking_id": "GM123456789012345678",
+    "expected_status": "IN_TRANSIT",
+    "expected_location": "Berlin",
+    "expected_answer_contains": ["last scan", "Berlin", "update"]
+  }
+]
