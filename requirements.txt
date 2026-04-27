@@ -2,7 +2,7 @@
 langchain==0.3.25
 langchain-ollama==0.3.3
 langchain-community==0.3.24
-langgraph==0.4.1
+langgraph==0.2.60
 
 # Vector store & embeddings
 chromadb==0.6.3

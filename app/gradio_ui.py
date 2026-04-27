@@ -129,7 +129,7 @@ def agent_respond(
     if not user_message or not user_message.strip():
         return chat_history, _guardrail_badge(None)
 
-    # Convert gr.ChatInterface history format → internal format
+    # Convert gr messages-format history → internal format
     history_dicts = [
         {"role": m["role"], "content": m["content"]}
         for m in chat_history
@@ -262,7 +262,6 @@ def build_ui() -> gr.Blocks:
                     label="WISMO Assistant",
                     height=420,
                     type="messages",
-                    avatar_images=(None, "https://www.dhl.com/favicon.ico"),
                 )
 
                 guardrail_html_2 = gr.HTML(
